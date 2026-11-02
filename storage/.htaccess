@@ -1,0 +1,7 @@
+# Chặn tải trực tiếp. File minh chứng chỉ được phục vụ qua EvidenceController (có kiểm tra quyền).
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Deny from all
+</IfModule>

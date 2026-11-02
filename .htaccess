@@ -1,0 +1,7 @@
+# Đưa mọi yêu cầu vào thư mục public/ (chỉ public/ được mở ra web)
+Options -Indexes
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
